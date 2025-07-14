@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>KwizzKreate</title>
+    <meta  name="viewport" charset="utf-8" content="initial-scale=1, user-scalable=1, width=device-width">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/png" href="/static/images/logo.png">
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-left">
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="title">KwizzKreate</h1>
+
+    {% if session["user_id"] %}
+    <div class="nav-right">
+      <button class="btn-primary" onclick="window.location.href='/logout'">Logout</button>
+    </div>
+    {%else%}
+    <div class="nav-right">
+      <button class="btn-primary" onclick="window.location.href='/register'">Sign Up</button>
+    </div>
+    {%endif%}
+
+  </header>
+  <hr>
+  <main> {%block main%}{%endblock%}</main>
+  <footer style="background-color: #f8f8f8; padding: 1rem; text-align: center; font-size: 0.9rem; margin-top: 3rem;">
+    <p>&copy; 2025 KwizzKreate. All rights reserved.</p>
+    <p>Contact: <a href="Kingsims700@gmail.com">Kingsims@gmail.com.com</a> |
+       <a href="/contact">Contact Form</a> |
+       <a href="/about">About</a></p>
+  </footer>
+
+</body>
+</html>

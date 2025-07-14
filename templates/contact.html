@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1>Contact Us</h1>
+
+    {% if success %}
+        <p>✅ Thanks for your message! We'll get back to you soon.</p>
+    {% endif %}
+
+    <form method="POST">
+        <fieldset>
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Send</button>
+        </fieldset>
+    </form>
+{% endblock %}

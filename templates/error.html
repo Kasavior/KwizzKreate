@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div style="text-align: center; padding: 50px;">
+        <h1 style="color: #e53935;">⚠️ Oops! Something went wrong.</h1>
+
+        {% if message %}
+            <p style="font-size: 1.2rem; color: #555; margin-top: 20px;">
+                {{ message }}
+            </p>
+        {% else %}
+            <p style="font-size: 1.2rem; color: #555; margin-top: 20px;">
+                An unexpected error occurred.
+            </p>
+        {% endif %}
+
+        <button onclick="window.history.back()" style="margin-top: 30px; padding: 10px 20px; font-size: 1rem; background-color: #ff7043; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            ⬅ Go Back
+        </button>
+    </div>
+{% endblock %}

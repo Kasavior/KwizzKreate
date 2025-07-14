@@ -1,0 +1,28 @@
+{%extends "layout.html"%}
+
+
+{%block main%}
+    
+    
+    <form action="create" method="post">
+        
+        {%for i in range(questions)%}
+        <fieldset>
+           <label for="question{{i+1}}" class="question">Question {{i+1}}
+           </label>
+           <input name="question{{i+1}}" type="text" max-length="100" min-length="1" placeholder="Question" required>
+           <input name="A{{i+1}}" type="text" max-length="100" min-length="1" placeholder="A" required>
+           <input name="B{{i+1}}" type="text" max-length="100" min-length="1" placeholder="B" required>
+           <input name="C{{i+1}}" type="text" max-length="100" min-length="1" placeholder="C" required>
+           <input name="D{{i+1}}" type="text" max-length="100" min-length="1" placeholder="D" required>
+           <input name="correct_option{{i+1}}" type="text" max-length="100" min-length="1" placeholder="answer (A, B, C, D)" required>
+        </fieldset>
+        {%endfor%}
+        <button type="submit">Done</button>
+        <input name="quiz_name" type="text" max-length="50" min-length="1" placeholder="Name of quiz" required>
+    </form>
+
+
+
+
+{%endblock%}

@@ -1,0 +1,186 @@
+/* Base styles for mobile-first approach */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffa726;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fb8c00;
+  padding: 15px 20px;
+  color: white;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Navigation */
+.nav-left, .nav-right {
+  margin: 10px 0;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #ef6c00;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Logout Button */
+.login-button {
+  background-color: #e65100;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #bf360c;
+}
+
+/* My Kwizzes Section */
+#mykwizzes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 10px 16px;
+  background-color: #fb8c00;
+}
+
+#mykwizzes-header {
+  background-color: #ef6c00;
+}
+#kwizzes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 10px;
+}
+
+.create-button {
+  background-color: #dfdfdf;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.create-button:hover {
+  background-color: #c2bcb9;
+}
+
+/* Form Styles */
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fb8c00;
+  margin: auto;
+  padding: 20px;
+  border: none;
+  width: 90%;
+  max-width: 600px;
+}
+
+form fieldset div {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin: 5px;
+}
+
+.btn-primary {
+  font-size: large;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e65100;
+  color: white;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #6eec75;
+}
+
+#delete-button:hover {
+  background-color: #ff0000;
+  border: none; 
+  background-color: none; 
+  cursor: pointer;
+}
+
+.option {
+  font-size: large;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e65100;
+  color: white;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-left, .nav-right {
+    margin: 0;
+  }
+
+  .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

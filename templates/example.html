@@ -1,0 +1,210 @@
+{% extends "layout.html"%}
+
+
+{% block main %}
+    <header class="kwizz-header">
+        <h1> Example kwizz </h1>
+    </header>
+    <form action="/example" method="post">
+        <h2 class="question"> 1. What planet is known as the red planet </h2>
+        <fieldset id="question1">
+            <div>
+            <input type="radio" name="q1" class="option" value="A">
+            <label class="option"> Venus </label>
+            </div>
+            <div>
+            <input type="radio" name="q1" class="option" value="B">
+            <label class="option"> Mars </label>
+            </div>
+            <div>
+            <input type="radio" name="q1" class="option" value="C">
+            <label class="option"> Jupiter </label>
+            </div>
+            <div>
+            <input type="radio" name="q1" class="option" value="D">
+            <label class="option"> Saturn </label>
+            </div>
+        </fieldset>
+        <hr>
+        <h2 class="question"> 2. Who wrote the play Romeo and Juliet? </h2>
+        <fieldset id="question2">
+            <div>
+            <input type="radio" name="q2" class="option" value="A">
+            <label class="option"> Charles Dickens </label>
+            </div>
+            <div>
+            <input type="radio" name="q2" class="option" value="B">
+            <label class="option"> Mark Twain </label>
+            </div>
+            <div>
+            <input type="radio" name="q2" class="option" value="C">
+            <label class="option"> William Shakespeare </label>
+            </div>
+            <div>
+            <input type="radio" name="q2" class="option" value="D">
+            <label class="option"> Jane Austen </label>
+            </div>
+        </fieldset>
+        <hr>
+        <h2 class="question"> 3. What is the largest mammal in the world? </h2>
+        <fieldset id="question3">
+            <div>
+            <input type="radio" name="q3" class="option" value="A">
+            <label class="option"> Elephant </label>
+            </div>
+            <div>
+            <input type="radio" name="q3" class="option" value="B">
+            <label class="option"> Whale Shark </label>
+            </div>
+            <div>
+            <input type="radio" name="q3" class="option" value="C">
+            <label class="option"> Blue Whale </label>
+            </div>
+            <div>
+            <input type="radio" name="q3" class="option" value="D">
+            <label class="option"> Giraffe </label>
+            </div>
+        </fieldset>
+        <hr>
+        <h2 class="question"> 4. What is the capital of France? </h2>
+        <fieldset id="question4">
+            <div>
+            <input type="radio" name="q4" class="option" value="A">
+            <label class="option"> Rome </label>
+            </div>
+            <div>
+            <input type="radio" name="q4" class="option" value="B">
+            <label class="option"> Berlin </label>
+            </div>
+            <div>
+            <input type="radio" name="q4" class="option" value="C">
+            <label class="option"> Madrid </label>
+            </div>
+            <div>
+            <input type="radio" name="q4" class="option" value="D">
+            <label class="option"> Paris </label>
+            </div>
+        </fieldset>
+        <hr>
+        <h2 class="question"> 5. How many continents are there? </h2>
+        <fieldset id="question5">
+            <div>
+            <input type="radio" name="q5" class="option" value="A">
+            <label class="option"> 5 </label>
+            </div>
+            <div>
+            <input type="radio" name="q5" class="option" value="B">
+            <label class="option"> 6 </label>
+            </div>
+            <div>
+            <input type="radio" name="q5" class="option" value="C">
+            <label class="option"> 7 </label>
+            </div>
+            <div>
+            <input type="radio" name="q5" class="option" value="D">
+            <label class="option"> 8 </label>
+            </div>
+        </fieldset>
+        <hr>
+        <h2 class="question"> 6. Which gas do plants absorb from the atmosphere? </h2>
+        <fieldset id="question6">
+            <div>
+            <input type="radio" name="q6" class="option" value="A">
+            <label class="option"> Oxygen </label>
+            </div>
+            <div>
+            <input type="radio" name="q6" class="option" value="B">
+            <label class="option"> Hydrogen </label>
+            </div>
+            <div>
+            <input type="radio" name="q6" class="option" value="C">
+            <label class="option"> Carbon Dioxide </label>
+            </div>
+            <div>
+            <input type="radio" name="q6" class="option" value="D">
+            <label class="option"> Nitrogen </label>
+            </div>
+        </fieldset>
+        <hr>
+        <h2 class="question"> 7. What is H2O more commonly known as? </h2>
+        <fieldset id="question7">
+            <div>
+            <input type="radio" name="q7" class="option" value="A">
+            <label class="option"> Oxygen </label>
+            </div>
+            <div>
+            <input type="radio" name="q7" class="option" value="B">
+            <label class="option"> Hydrogen </label>
+            </div>
+            <div>
+            <input type="radio" name="q7" class="option" value="C">
+            <label class="option"> Salt </label>
+            </div>
+            <div>
+            <input type="radio" name="q7" class="option" value="D">
+            <label class="option"> Water </label>
+            </div>
+        </fieldset>
+        <hr>
+        <h2 class="question"> 8. What is 8 x 7? </h2>
+        <fieldset id="question8">
+            <div>
+            <input type="radio" name="q8" class="option" value="A">
+            <label class="option"> 56 </label>
+            </div>
+            <div>
+            <input type="radio" name="q8" class="option" value="B">
+            <label class="option"> 64 </label>
+            </div>
+            <div>
+            <input type="radio" name="q8" class="option" value="C">
+            <label class="option"> 49 </label>
+            </div>
+            <div>
+            <input type="radio" name="q8" class="option" value="D">
+            <label class="option"> 42 </label>
+            </div>
+        </fieldset>
+        <hr>
+        <h2 class="question"> 9. In which country were the Olympic Games invented? </h2>
+        <fieldset id="question9">
+            <div>
+            <input type="radio" name="q9" class="option" value="A">
+            <label class="option"> Italy </label>
+            </div>
+            <div>
+            <input type="radio" name="q9" class="option" value="B">
+            <label class="option"> Greece </label>
+            </div>
+            <div>
+            <input type="radio" name="q9" class="option" value="C">
+            <label class="option"> China </label>
+            </div>
+            <div>
+            <input type="radio" name="q9" class="option" value="D">
+            <label class="option"> USA </label>
+            </div>
+        </fieldset>
+        <hr>
+        <h2 class="question"> 10. What is the boiling point of water at sea level (Celcius)? </h2>
+        <fieldset id="question10">
+            <div>
+            <input type="radio" name="q10" class="option" value="A">
+            <label class="option"> 90 </label>
+            </div>
+            <div>
+            <input type="radio" name="q10" class="option" value="B">
+            <label class="option"> 100 </label>
+            </div>
+            <div>
+            <input type="radio" name="q10" class="option" value="C">
+            <label class="option"> 110 </label>
+            </div>
+            <div>
+            <input type="radio" name="q10" class="option" value="D">
+            <label class="option"> 120 </label>
+            </div>
+        </fieldset>
+        <button class="btn-primary" type="submit">Exit</Button>
+    </form>
+{% endblock %}

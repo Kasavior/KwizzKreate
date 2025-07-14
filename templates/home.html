@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<header class="main-header">
+    <h1>Home</h1>
+</header>
+
+<section id="mykwizzes">
+    <h2 id="mykwizzes-header">My Kwizzes</h2>
+
+    <div id="kwizzes">
+        <form action="/example" method="get">
+            <button class="btn-primary" type="submit">Example Quiz</button>
+        </form>
+        {% if quizzes %}
+            <ul>
+            {% for quiz in quizzes %}
+                <li>
+                <form action="/quiz/{{ quiz[0] }}" method="get">
+                    <button class="btn-primary" type="submit">{{ quiz[1] }}</button>
+                </form>
+                <form  action="/remove_quiz/{{ quiz['id'] }}" method="post" style="display:inline;" onsubmit="return confirm('Delete this quiz?');">
+                    <button id="delete-button" type="submit">Delete</button>
+                </form>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>You haven’t created any quizzes yet.</p>
+        {% endif %}
+
+        <form action="/new_kwizz" method="post">
+            <label for="questions">Number of questions:</label>
+            <input type="number" name="questions" min="2" max="100" required>
+            <button class="create-button">Create kwizz</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

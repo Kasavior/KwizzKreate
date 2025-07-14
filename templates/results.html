@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block main %}
+  <h1>Quiz Results</h1>
+  <p>You scored {{ score }} out of {{ total }} ({{ "%.2f"|format(percent) }}%)</p>
+
+  <ul>
+  {% for r in results %}
+    <li>
+      Question ID {{ r.question_id }} — Your answer: {{ r.user_answer }} — Correct: {{ r.correct_answer }} —
+      {% if r.is_correct %}Correct{% else %}Wrong{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+
+  <a href="/">Back to Home</a>
+{% endblock %}
